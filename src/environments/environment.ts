@@ -4,14 +4,14 @@
 
 export const environment = {
   production: false,
-    firebase: {
-    apiKey: 'AIzaSyBJ0SwPMbbakEGHG1YV1xKb9q_gjxpVkog',
-    authDomain: 'pankal-e7786.firebaseapp.com',
-    databaseURL: 'https://pankal-e7786.firebaseio.com',
-    projectId: 'pankal-e7786',
-    storageBucket: 'pankal-e7786.appspot.com',
-    messagingSenderId: '138882110784'
-   }
+  firebase: {
+    apiKey: "AIzaSyAbCkiR2IY0r0YPQ0oWQ0ctwBJcWvyLs2g",
+    authDomain: "fire-ang-67e3f.firebaseapp.com",
+    databaseURL: "https://fire-ang-67e3f.firebaseio.com",
+    projectId: "fire-ang-67e3f",
+    storageBucket: "fire-ang-67e3f.appspot.com",
+    messagingSenderId: "678069857438"
+  }
 };
 
 /*
