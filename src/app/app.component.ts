@@ -16,6 +16,7 @@ export class AppComponent {
 
     this.user = {
       // email: '',
+      username: '',
       password: ''
     };
 
@@ -55,8 +56,10 @@ export class AppComponent {
         this.afAuth.auth.signOut();
         // [END signout]
       } else {
-        var email = document.getElementById('email').textContent;
-        var password = document.getElementById('password').textContent;
+        // var email = document.getElementById('email').textContent;
+        // var password = document.getElementById('password').textContent;
+        var email = this.user.username;
+        var password = this.user.password;
         if (email.length < 4) {
           alert('Please enter an email address.');
           return;
