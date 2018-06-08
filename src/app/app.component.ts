@@ -88,4 +88,39 @@ export class AppComponent {
       }
       // document.getElementById('quickstart-sign-in').disabled = true;
     }
+
+
+        /**
+     * Handles the sign up button press.
+     */
+    handleSignUp() {
+      var email = this.user.username;
+      var password = this.user.password;
+      if (email.length < 4) {
+        alert('Please enter an email address.');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Please enter a password.');
+        return;
+      }
+
+      console.log("Signing up " + email);
+      // Sign in with email and pass.
+      // [START createwithemail]
+      this.afAuth.auth.createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // [START_EXCLUDE]
+        if (errorCode == 'auth/weak-password') {
+          alert('The password is too weak.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+        // [END_EXCLUDE]
+      });
+      // [END createwithemail]
+    }
 }

@@ -4,7 +4,7 @@
     Welcome to {{ title }}!
   </h1>
   <div *ngIf="afAuth.user | async as user; else showLogin">
-    <h1>Hello {{ user.metadata.creationTime }}!</h1>
+    <h1>Hello {{ user.displayName }}!</h1>
     <button (click)="logout()">Logout</button>
   </div>
   <ng-template #showLogin>
@@ -45,7 +45,7 @@
           <br/><br/>
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin" (click)="toggleSignIn()">Sign In</button>
           &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Sign Up</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup" (click)="handleSignUp()">Sign Up</button>
           &nbsp;&nbsp;&nbsp;
           <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Send Email Verification</button>
           &nbsp;&nbsp;&nbsp;
