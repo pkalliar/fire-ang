@@ -3,6 +3,7 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/JsntlJZ9h1U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <div *ngIf="afAuth.user | async as user; else showLogin">
     <h1>Hello {{ user.displayName }}!</h1>
     <button (click)="logout()">Logout</button>
